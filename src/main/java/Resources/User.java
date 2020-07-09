@@ -1,4 +1,4 @@
-package Resourses;
+package Resources;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,16 +6,18 @@ import java.util.List;
 public class User {
     private int id;
     private String name;
+    private String password;
     private String email;
     private List<Password> passwords ;
 
     public User(){}
 
-    public User(int id, String name, String email) {
+    public User(int id, String name, String password, String email) {
         this.id = id;
         this.name = name;
+        this.password = password;
         this.email = email;
-        this.passwords = new ArrayList<Password>();
+        passwords = new ArrayList<Password>();
     }
 
     public int getId() {
@@ -40,6 +42,18 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Password> getPasswords() {
+        return passwords;
+    }
+
+    public void setPasswords(List<Password> passwords) {
+        this.passwords = passwords;
     }
 
     public List<Password> getPassword() {

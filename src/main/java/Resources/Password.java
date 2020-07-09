@@ -1,18 +1,20 @@
-package Resourses;
+package Resources;
 
 public class Password {
     private int id;
 
     private String password;
 
-    private String toObject;
+    private String site;
+
+    private int userId;
 
     public Password() { }
 
-    public Password(int id, String password, String toObject) {
+    public Password(int id, String password, String site) {
         this.id = id;
         this.password = password;
-        this.toObject = toObject;
+        this.site = site;
     }
 
     public int getId() {
@@ -31,11 +33,11 @@ public class Password {
         this.password = password;
     }
 
-    public String getToObject() {
-        return toObject;
+    public String getSite() {
+        return site;
     }
 
-    public void setToObject(String toObject) {
-        this.toObject = toObject;
+    public void setSite(String site) {
+        this.site = site;
     }
 }
